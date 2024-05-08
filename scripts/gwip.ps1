@@ -28,11 +28,11 @@ git add -A
 Write-Host "Preparing commit..." -ForegroundColor green
 if ($(git log -1 --pretty=%B) -contains "--wip--") {
 Write-Host "Amending..." -ForegroundColor yellow
-git commit --no-verify --no-gpg-sign --amend -m "--wip--"
+git commit --no-verify --no-gpg-sign --amend -m "--wip-- [skip ci]"
 Write-Host "Force pushing" -ForegroundColor red
 git push -f
 } else {
-git commit --no-verify --no-gpg-sign -m "--wip--"
+git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"
 Write-Host "Pushing" -ForegroundColor green
 git push
 }
