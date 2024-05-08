@@ -34,4 +34,5 @@ git push -f
 } else {
 git commit --no-verify --no-gpg-sign -m "--wip--"
 Write-Host "Pushing" -ForegroundColor green
+git push
 }
